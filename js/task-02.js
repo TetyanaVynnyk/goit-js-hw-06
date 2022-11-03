@@ -8,6 +8,8 @@ const ingredients = [
 ];
 
 const list = document.querySelector("#ingredients");
+list.textContent = 'Ingredients:';
+
 
 const ingredientName = (ingredients) => {
   for (let i = 0; i < ingredients.length; i+= 1) {
