@@ -13,8 +13,11 @@ const images = [
   },
 ];
 
-const galeryContainer = document.querySelector('.gallery');
-const makeGalery = images
-  .map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`)
-  .join("");
-galeryContainer.insertAdjacentHTML("afterbegin", makeGalery);
+const galleryListEl = document.querySelector('.gallery');
+
+const makeGalleryEl = ({ url, alt }) =>
+  `<li class="js-gallery-item"><img src="${url}" alt="${alt}" class="js-gallery-img"></li>`;
+
+const makeGalleryItem = images.map(makeGalleryEl).join('');
+
+galleryListEl.insertAdjacentHTML('beforeend', makeGalleryItem);
