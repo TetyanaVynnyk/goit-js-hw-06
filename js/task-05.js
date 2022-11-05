@@ -6,3 +6,4 @@ function inputEvent(event){
 }
 
 inputName.addEventListener('input', inputEvent);
+
